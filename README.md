@@ -5,7 +5,7 @@ SimpleViewEnums.php
 SimpleViewExample.php
 
 Author:
-       Michael Taylor <mtaylor@asg-architects.com>
+       Michael Taylor Contact: www.michaeltaylor3d.com/contact
  
 Copyright (c) 2013 Ayers Saint Gross
 
