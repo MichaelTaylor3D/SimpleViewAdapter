@@ -54,7 +54,7 @@ class SimpleViewAdapter
 		}
 		else
 		{
-			die('Error: variable can not be converted to a bool, please check the value');
+			die('Error: variable is not a synonym of a bool, please check the value');
 		}
 		
 	}
