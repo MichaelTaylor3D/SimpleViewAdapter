@@ -1,11 +1,12 @@
 <?php
 // 
-//  SimpleViewAdapter.php
+//  SimpleViewEnums.php
 //  
 //  Author:
-//       Michael Taylor <mtaylor@asg-architects.com>
+//       Michael Taylor www.michaeltaylor3d.com/contact
 //  
 //  Copyright (c) 2013 Ayers Saint Gross
+//	Website: www.asg-architects.com
 // 
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU Lesser General Public License as published by
