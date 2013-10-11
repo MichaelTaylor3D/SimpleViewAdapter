@@ -40,7 +40,7 @@ class SimpleViewAdapter
 		$this->soapClient = new SoapClient($soapURL);
 	}
 	
-	private function ConvertBoolToInt($var)
+	private function convertBoolToInt($var)
 	{
 		if(is_bool($var))
 		{
@@ -64,7 +64,7 @@ class SimpleViewAdapter
 	 * @param integer $pageSize
 	 * @param integer $pageNum
 	 * @param array $filter
-	 * @param bbol $displayAmenities
+	 * @param bool $displayAmenities
 	 */
 	public function getListings($pageSize, $pageNum, $filter, $displayAmenities)
 	{
@@ -75,11 +75,10 @@ class SimpleViewAdapter
 			$results = $this->soapClient->getListings(
 														$this->clientUserName,
 														$this->clientPassword,
-														$pageNum, 
-														$pageSize, 
-														$filter, 
-														ConvertBoolToInt($displayAmenities)
-													);
+														$pageNum,$pageSize,
+														$filter,
+														$this->convertBoolToInt($displayAmenities)
+													 );
 		}
 		catch (Exception $ex)		
 		{

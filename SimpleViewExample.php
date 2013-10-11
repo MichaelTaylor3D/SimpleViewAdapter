@@ -33,9 +33,9 @@ $pageNum = 1;
 $showAmenities = true;
 
 $results = $simpleViewConnect->getListings(
-											$pageSize, 
-											$pageNum, 
-											SimpleViewFilter::filter_AllListings(), 
+											$pageSize,
+											$pageNum,
+											SimpleViewFilter::filter_AllListings(),
 											$showAmenities
 										  );
 

@@ -80,7 +80,7 @@ class SimpleViewFilter
 	public static function filter_AllListings()
 	{
 		$filter = new SimpleViewFilter('Listing', 'Listingid', FilterType::GREATER_THAN, 0);
-		return self::filter($filter);
+		return self::generatefilter($filter);
 	}
 	
 	/**
