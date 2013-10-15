@@ -33,7 +33,7 @@ $pageSize = 50;
 $pageNum = 1;
 $showAmenities = true;
 
-$results = $simpleViewConnect->getListings(
+$results = $simpleViewAdapter->getListings(
 											$pageSize,
 											$pageNum,
 											SimpleViewFilter::filter_AllListings(),
