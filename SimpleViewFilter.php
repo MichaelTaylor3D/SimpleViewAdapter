@@ -124,7 +124,7 @@ class SimpleViewFilter
 		);
 	}
 	
-	private static function isArrayOfFilters($array)
+	private static function isArrayOfFilters($filters)
 	{
 		return (is_array($filters) && (is_a($filters[0], 'SimpleViewFilter'))) ? true : false;
 	}
