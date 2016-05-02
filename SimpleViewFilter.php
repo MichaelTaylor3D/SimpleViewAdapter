@@ -117,10 +117,7 @@ class SimpleViewFilter
 		return array 
 		(
 			'ANDOR' => $AndOr,
-			'FILTERS' => array
-			(
-				self::filterCollectiontoArray($filters)
-			)
+			'FILTERS' => self::filterCollectiontoArray($filters)
 		);
 	}
 	
