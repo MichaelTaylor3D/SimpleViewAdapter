@@ -51,9 +51,9 @@ class SimpleViewFilter
 		return array
 		(
 			'FIELDCATEGORY' => $this->fieldCategory,
-			'FIELDNAME' => $this->fieldName,
-			'FILTERTYPE' => $this->filterType,
-			'FILTERVALUE' => $this->filterValue
+			'FIELDNAME'     => $this->fieldName,
+			'FILTERTYPE'    => $this->filterType,
+			'FILTERVALUE'   => $this->filterValue
 		);
 	}
 	
@@ -117,14 +117,26 @@ class SimpleViewFilter
 		return array 
 		(
 			'ANDOR' => $AndOr,
-			'FILTERS' => array
-			(
-				self::filterCollectiontoArray($filters)
-			)
+			'FILTERS' => self::filterCollectiontoArray($filters)
+		);
+	}
+
+	/**
+	 * Allows nested filters to be generated
+	 * @param string $AndOr
+	 * @param array $parentFilter
+	 * @param array $filters
+	 */
+	public static function generateNestedFilter($AndOr, $parentFilter, $filters)
+	{
+		return array
+		(
+			'ANDOR'   => $AndOr,
+			'FILTERS' => array($parentFilter, $filters)
 		);
 	}
 	
-	private static function isArrayOfFilters($array)
+	private static function isArrayOfFilters($filters)
 	{
 		return (is_array($filters) && (is_a($filters[0], 'SimpleViewFilter'))) ? true : false;
 	}
